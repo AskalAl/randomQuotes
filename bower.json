@@ -16,14 +16,13 @@
   "keywords": [
     "jquery",
     "plugin",
-    "twitter",
-    "tweet",
-    "parser",
-    "parse",
-    "username",
-    "hashtag",
-    "url",
-    "minimal"
+    "sentence",
+    "sentences",
+    "random",
+    "citation",
+    "citations",
+    "proverbs",
+    "fun"
   ],
   "license": "MIT",
   "ignore": [

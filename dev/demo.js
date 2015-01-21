@@ -1,6 +1,6 @@
 $(document).ready(function(){ 
     
    
-    $(".tweet").randomSentence();
+    $(".random_sentence").randomSentence();
     
 });

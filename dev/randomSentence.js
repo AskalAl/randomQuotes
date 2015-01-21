@@ -14,7 +14,7 @@
         
         var defauts=
         {
-            "lang" : "fr",
+            "lang" : "en",
             "sentencesPath" : "dev/sentences.json"
 
         };  
@@ -39,11 +39,8 @@
                 }
                 var randomize = parseInt(Math.random()*results[0].length);
                 sentence = results[0][randomize];
-                console.log(typeof sentence);
+
                 that.text(sentence);
-                
-                
-                //console.dir(results);
             });
 
             
