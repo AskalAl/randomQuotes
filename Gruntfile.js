@@ -12,7 +12,8 @@ module.exports = function(grunt){
 			},
 			my_target: {
 				files: {
-					'dist/randomSentence.min.js' : 'dev/randomSentence.js'
+					'dist/randomSentence.min.js' : 'dev/randomSentence.js',
+					'dist/sentences.json' : 'dev/sentences.json'
 				}
 			}
 		}
