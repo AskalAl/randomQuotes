@@ -14,19 +14,39 @@
         
         var defauts=
         {
-            "lang" : "fr"
+            "lang" : "fr",
+            "sentencesPath" : "dev/sentences.json"
 
         };  
 
-        var parametres=$.extend(defauts, options);
-
+        var parameters=$.extend(defauts, options);
+        
 
         return this.each(function()
         {
-           var sentence = "YO !"
+           var sentence;
+            var that = $(this);
+            
+            $.getJSON(parameters.sentencesPath, function($data){
+                var results = [];
+                var searchField = "lang";
+                var searchVal = parameters.lang;
+                
+                for(var i = 0; i < $data.length ; i++) {
+                    if($data[i][searchField] == searchVal){
+                        results.push($data[i].sentences);
+                    }
+                }
+                var randomize = parseInt(Math.random()*results[0].length);
+                sentence = results[0][randomize];
+                console.log(typeof sentence);
+                that.text(sentence);
+                
+                
+                //console.dir(results);
+            });
 
-            console.log(sentence);
-            $(this).html(sentence);
+            
         });
     };
 })(jQuery);
