@@ -1,5 +1,5 @@
 /*!
- * randomQuotes.js v1.0.0
+ * randomQuotes.js v1.0.1
  * Put a random sentence where you want in your website. Perfect for footer :)
  * MIT License
  * by Vincent Loy - https://vincent-loy.fr/
