@@ -34,7 +34,7 @@ Example:
 Then, you just have to call the `randomQuotes` function and giving it some parameters.
 
 ```javascript
-randomQuotes('.random-sentence', {
+randomQuotes('[CSS_SELECTOR]', {
     quotes: [
         '“The unexamined life is not worth living” – Socrates',
         '“If God did not exist, it would be necessary to invent Him” – Voltaire',
