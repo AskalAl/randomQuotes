@@ -1,50 +1,205 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
-		<meta charset="utf-8">
-		<title>randomeSentence.js</title>
+		<meta charset="utf-8" />
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+		<title>randomQuotes.js | The tiny JS Quotes Library</title>
         
-		<link href="demo.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Press+Start+2P|Ubuntu:300,400,400i" rel="stylesheet">
+		<meta name="description" content="This simple plugin was made to put some random quotes in a website footer. 
+					I see this feature in a lot of websites, so I created this tiny JS lib.
+					The library is 1.1kB (including the default parameters), so you can easly
+					install it without being scared about perfomance loss."/>
+
+		<style>
+			html, body {
+				box-sizing: border-box;
+				height: 100%;
+				background: #FC7753;
+				padding: 0;
+				margin: 0;
+			}
+
+			body {
+				position: relative;
+			}
+
+			.main-container {
+				height: 100%;
+				width: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+			}
+
+			.intro {
+				display: inline-block;
+				width: 50%;
+				font-family: 'Press Start 2P', cursive;
+				color: white;
+				font-size: 18px;
+				line-height: 1.8;
+				text-align: justify;
+				text-shadow: 4px 4px 0px rgba(72, 71, 92, 0.5);
+			}
+
+			.random-sentence {
+				font-size: 45px;
+				font-family: 'Ubuntu', sans;
+				color: white;
+				font-weight: bold;
+				font-style: italic;
+				letter-spacing: 2px;
+				text-align: center;
+				width: 75%;
+				text-shadow: 4px 4px 0px rgba(72, 71, 92, 0.5);
+			}
+
+			h1 {
+				color: white;
+				font-size: 77px;
+				font-family: 'Ubuntu', sans;
+				margin: 0;
+				font-weight: 100;
+			}
+
+			hr {
+				border: 2px solid white;
+				width: 33%;
+				margin: 15px 0;
+			}
+
+			footer {
+				font-family: 'Ubuntu', Sans;
+				color: white;
+				font-size: 18px;
+				text-align: center;
+				display: flex;
+				justify-content: space-between;
+				align-items: flex-end;
+				position: absolute;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				padding: 15px;
+			}
+
+			footer p {
+				margin: 0;
+			}
+
+			footer a {
+				color: #FAF0CA;
+				font-weight: bold;
+				text-decoration: none;
+				margin-left: 6px;
+			}
+
+			footer a:hover {
+				text-decoration: underline;
+			}
+
+			.btn {
+				margin-left: 0;
+				display: table;
+				border: 2px solid #FAF0CA;
+				border-radius: 5px;
+				padding: 10px 20px;
+				transition: .2s ease all;
+			}
+
+			.btn:hover {
+				background: #FAF0CA;
+				color: #FC7753;
+				text-decoration: none;
+			}
+
+			@media screen and (max-width: 720px) {
+				.main-container {
+					display: block;
+					margin: auto;
+					width: 90%;
+				}
+
+				h1 {
+					font-size: 35px;
+					text-align: center;
+					margin-bottom: 15px;
+				}
+
+				.intro {
+					width: 90%;
+					font-size: 12px;
+					margin: auto;
+					display: block;
+					text-align: left;
+					margin-bottom: 15px;
+				}
+
+				hr {
+					margin: auto;
+				}
+
+				.random-sentence {
+					font-size: 18px;
+					text-align: center;
+					width: 90%;
+					margin: auto;
+				}
+
+				footer {
+					position: static;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+				}
+			} 
+		</style>
 	</head>
 
 	<body>
-	    <header>
-	        <div class="wp">
-	            <h1>randomSentence.js</h1>
-	        </div>
-	    </header>
-		<div class="wp">
-			
-			
-			<div class="tweets">
-			    <p class="random_sentence">
-			     test 1
-			    </p>
-			    
-			    <p class="random_sentence">
-			     test 2
-			    </p>
-			    
-			    <p class="random_sentence">
-			     test 3
-			    </p>
-			    
-			    <p class="random_sentence">
-			     test 4
-			    </p>
-			</div>
-			
-			<div class="fork">
-            <img src="https://github-jobs.s3.amazonaws.com/168d1ca6-dd19-11e2-8a2e-153f588b3d80.png" alt="github logo">
-			    <h3>
-			         <a href="https://github.com/VincentLoy/randomSentence.js" target="_blank">Fork me on Github</a>
-			    </h3>
-			</div>
+	    <div class="main-container">
+			<h1>randomQuotes.js</h1>
+
+			<p class="intro">
+					This simple plugin was made to put some random quotes in a website footer. 
+					I see this feature in a lot of websites, so I created this tiny JS lib.
+					The library is 1.1kB (including the default parameters), so you can easly
+					install it without being scared about perfomance loss.
+			</p>
+
+			<hr/>
+
+			<div class="random-sentence"></div>
+
+			<footer>
+				<p>made by <a target="_blank" href="https://vincent-loy.fr/">Vincent Loy</a></p>
+				&nbsp; &nbsp; &nbsp; &nbsp; 
+				<a target="_blank" class="btn" href="https://github.com/VincentLoy/randomQuotes">documentation</a>
+			</footer>
 		</div>
 
-		<script src="dev/vendor/jquery.min.js"></script>
-		<script src="dev/randomSentence.js"></script>
-		<script src="dev/demo.js"></script>
+		<script src="dist/randomQuotes.min.js"></script>
+		<script>
+				// Example 
+				randomQuotes('.random-sentence', {
+            quotes: [
+                '“The unexamined life is not worth living” – Socrates',
+                '“If God did not exist, it would be necessary to invent Him” – Voltaire',
+                '“This is my cheese !” – An unknown French guy',
+                '“Man is condemned to be free” – Jean-Paul Sartre',
+                '“Man is the measure of all things” – Protagoras',
+                '“This plugin is awesome !” – Vincent Loy',
+                '“One good thing about music, when it hits you, you feel no pain.” ― Bob Marley',
+                '“Don\'t gain the world and lose your soul; wisdom is better than silver or gold.” ― Bob Marley',
+            ],
+            loop: true,
+            interval: 3500
+				});
+		</script>
 	</body>
 
 </html>
